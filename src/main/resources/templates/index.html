@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>BlogApplication</title>
+    <style>
+        h1
+        {
+            color:red;
+            font-weight:bold;
+            font-size:41px;
+            text-shadow:1px -1px 0 #767676;
+        }
+        .h
+        {
+            color:brown;
+            font-weight:bold;
+            font-size:30px;
+            margin=0;
+        }
+        .body
+        {
+            font-size:25px;
+            text-align:left;
+        }
+        .date
+        {
+            color: gray;
+            font-size: 20px;
+            font-weight:bold;
+        }
+
+
+    </style>
+</head>
+<body>
+<main id="p">
+    <h1>Posts are :- </h1>
+    <post th:each="p : ${avas}">
+        <p>
+        <span class="h" th:text="${p.title}"></span>
+        <br>
+        <span class="body"><span th:text="${p.body}"></span></span>
+        <br>
+        <span class="date"><span th:text="${p.date}"></span></span>
+        </p>
+
+    </post>
+
+</main>
+</body>
+</html>
